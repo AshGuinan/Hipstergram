@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="jumbotron">
+        <h1>Hipstergram</h1>
+        <div class = "transparent"><p>Listen {{user}}, you probably haven't heard of us. We're progressive, yet underground. We like our non-fat soy skinny cinnamon lattes with organic sprinkles, an extra whip and a hazelnut shot. We talk about pretentious poetry and classic literature, and hang obscure quotes from ...people in our rooms. We take drama class, because quite simply our lives don't always have enough. We thrive on trying to be original. But the single truth you need to know about us is this...
+            <br>We were doing this software engineering thing before it was cool. </p>
+      </div>
+          <p></p>
+        
+      </div>
+
+    {% else %}
+
+    <p>Please login (or Register) first...</p>
+
+{% endif %}
+{%  endblock %}

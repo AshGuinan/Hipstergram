@@ -1,0 +1,106 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 70px;
+    background: 
+url("http://i1164.photobucket.com/albums/q578/sweetabsinthekid/brick-wallpaper-112768510349JN4_zpsfmlavvut.jpg");
+/*TODO: Change urls to img served on Danu*/
+}
+#slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 240px; 
+    height: 240px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+.contains {
+height: 40%;
+weight: 50%;
+margin-left: auto;
+margin-right: auto
+}
+
+ h1{
+font-family: "Lobster", cursive;
+color: white;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.contains h2, h3, p{
+font-family: 'Amatic SC', cursive;
+color: black;
+margin-left: auto;
+margin-right: auto;
+font-size; 130%;
+text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.transparent{
+    padding: 10px;
+  background:rgba(255,255,255,0.8);
+}
+
+.content{
+padding-top: 2%;
+padding-left: 2%;
+padding-right: 2%;
+padding-bottom: 1%;
+background:rgba(255,255,255,0.8);
+border-radius: 7px;
+    
+}
+
+.jumbotron{
+background: url("http://i1164.photobucket.com/albums/q578/sweetabsinthekid/enhanced-buzz-7346-1372715771-16_zpsq6dgfvuu.jpg") cover no-repeat; 
+}
+
+.contains img{
+max-height: 100%;
+max-width: 100%;
+}
+ 
+.contains h1{
+font-family: "Lobster", cursive;
+font-size: 200%;
+font-weight: 400;
+}
+
+.starRating:not(old){
+  display        : inline-block;
+  width          : 7.5em;
+  height         : 1.5em;
+  overflow       : hidden;
+  vertical-align : bottom;
+}
+
+.starRating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
+}
+
+.starRating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background      : url('{{STATIC_URL}}/img/tiny_star.gif');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+}
+
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+.starRating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
+}
